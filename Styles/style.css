@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MAIN */
+.main1001{
+    background-color: red;
+    height: 300px;
+    width: 700px;
+    border-radius: 200px;
+    box-shadow: 0px 10px 10px rgba(255, 0, 0, 0.3),
+                0px 10px 30px rgba(255, 0, 0, 0.5),
+                0px 10px 50px rgba(255, 0, 0, 0.7); 
+    display: flex;
+    align-items: center;           
+}
+.check1001{display: none;}
+
+
+/* SMILEY */
+.smile1001{
+    background-color: white;
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.left_eye{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+
+.right_eye{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+}
+
+.mouth{
+    background-color: red;
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    position: absolute;
+    bottom: 40px;
+    transition: 0.5s;
+}
+
+
+/* :hover and :checked */
+.main1001:hover{cursor: pointer;}
+.check1001:checked ~ .main1001{
+    background-color: rgb(5, 187, 5);
+    box-shadow: 0px 10px 10px rgba(5, 187, 5, 0.3),
+                0px 10px 30px rgba(5, 187, 5, 0.5),
+                0px 10px 50px rgba(5, 187, 5, 0.7); 
+}
+.check1001:checked ~ .main1001 .smile1001 .left_eye{
+    background-color: rgb(5, 187, 5);
+}
+.check1001:checked ~ .main1001 .smile1001 .right_eye{
+    background-color: rgb(5, 187, 5);
+}
+.check1001:checked ~ .main1001 .smile1001 .mouth{
+    background-color: rgb(5, 187, 5);
+    height: 70px;
+    border-radius: 0%;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.check1001:checked ~ .main1001 .smile1001{
+    left: 400px;
+}
+
